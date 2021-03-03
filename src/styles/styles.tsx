@@ -34,26 +34,79 @@ export const ZoomCtrl = styled.div`
   margin-right: auto;
   text-align: right;
   height: 2.2rem;
+  span.print {
+    text-align: left;
+    margin: 0px;
+  }
   span {
     border-radius: 15px;
     width: 2rem;
-    padding: 0 1.2rem;
+    padding: 0 1rem;
     margin: 10px;
     display: inline;
     background: #28539c;
     color: white;
     border: 0.5px solid black;
-    box-shadow: 2px 2px 7px black;
+    box-shadow: 5px 5px 7px black;
     z-index: 20;
     cursor: pointer;
-    :active {
-      box-shadow: 1px 1 px 2px black;
-      transition: 0.2s;
+    &:active {
+      box-shadow: 2px 2px 5px black;
     }
-    :hover {
+    &:hover {
       color: #cfa9a9;
       background: #214b94;
-      transition-duration: 0.7s;
+      transition-duration: 0.4s;
     }
   }
+`;
+export const ResPreview = styled.div``;
+export const AboutPreview = styled.div``;
+export const ProPreview = styled.div``;
+export const MiscPreview = styled.div``;
+export const PreviewContainer = styled.main`
+  display: flexbox;
+  flex-wrap: wrap;
+  width: 100vw;
+  background-image: url("./static/theater.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
+  div:hover {
+    box-shadow: 3px 3px 10px white;
+    transform: rotate3d(0, 0, 0, 0);
+    transition-duration: 0.5s;
+  }
+`;
+
+export const Left = styled.section`
+  div {
+    height: 20vh;
+    min-height: 200px;
+    width: 25vw;
+    min-width: 150px;
+    border: 2px solid #161515;
+    background: #4949a1;
+    border-radius: 15px;
+    margin: 40px;
+    transform: rotate3d(30, -30, -15, 30deg);
+    box-shadow: 5px 5px 20px white;
+  }
+`;
+export const Right = styled.section`
+  div {
+    height: 20vh;
+    min-height: 200px;
+    width: 25vw;
+    min-width: 150px;
+    border: 2px solid #161515;
+    background: #4949a1;
+    border-radius: 15px;
+    margin: 40px;
+    transform: rotate3d(-30, -30, 15, 30deg);
+    box-shadow: 5px 5px 20px white;
+  }
+  right: 0px;
+  position: absolute;
 `;

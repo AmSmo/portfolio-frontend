@@ -1,9 +1,11 @@
 import React from "react";
 
-type ProjectsProps = {};
+type ProjectsProps = {
+  projects: [];
+};
 
-const Projects: React.FC<ProjectsProps> = () => {
-  return <div>Projects</div>;
+const Projects: React.FC<ProjectsProps> = ({ projects }) => {
+  return <div></div>;
 };
 
 export default Projects;

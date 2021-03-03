@@ -11,7 +11,6 @@ const Resume: React.FC<ResumeProps> = () => {
     <>
       <ZoomCtrl>
         <span onClick={() => setScale((prevScale) => prevScale + 0.1)}>+</span>
-
         <span onClick={() => setScale((prevScale) => prevScale - 0.1)}>-</span>
       </ZoomCtrl>
       <RemBody>
