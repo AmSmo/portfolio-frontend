@@ -11,12 +11,14 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <Switch>
-        <Route path="/projects" component={Projects} />
-        <Route path="/resume" component={Resume} />
-        <Route path="/about" component={About} />
-        <Route path="/" component={Home} />
-      </Switch>
+      <main style={{ position: "relative", paddingTop: "3rem" }}>
+        <Switch>
+          <Route path="/projects" component={Projects} />
+          <Route path="/resume" component={Resume} />
+          <Route path="/about" component={About} />
+          <Route path="/" component={Home} />
+        </Switch>
+      </main>
     </div>
   );
 }

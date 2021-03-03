@@ -8,6 +8,8 @@ export const Nav = styled.nav`
   display: flexbox;
   justify-content: space-between;
   color: #ffffff;
+  position: fixed;
+  z-index: 10;
 `;
 
 export const NavButton = styled.p`
@@ -67,10 +69,13 @@ export const MiscPreview = styled.div``;
 export const PreviewContainer = styled.main`
   display: flexbox;
   flex-wrap: wrap;
+  padding-top: 3rem;
   width: 100vw;
+  height: 97vh;
   background-image: url("./static/theater.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
+
   background-position-x: center;
   background-position-y: bottom;
   div:hover {
@@ -78,12 +83,22 @@ export const PreviewContainer = styled.main`
     transform: rotate3d(0, 0, 0, 0);
     transition-duration: 0.5s;
   }
+  section {
+    padding-top: 3rem;
+  }
+  @media (max-width: 640px), (max-height: 500px) {
+    justify-content: center;
+    height: fit-content;
+    section {
+      padding-top: 0;
+    }
+  }
 `;
 
 export const Left = styled.section`
   div {
     height: 20vh;
-    min-height: 200px;
+    min-height: 160px;
     width: 25vw;
     min-width: 150px;
     border: 2px solid #161515;
@@ -93,11 +108,19 @@ export const Left = styled.section`
     transform: rotate3d(30, -30, -15, 30deg);
     box-shadow: 5px 5px 20px white;
   }
+  @media (max-width: 640px), (max-height: 500px) {
+    div {
+      width: 70vw;
+      margin: 20px auto;
+      height: 300px;
+      transform: rotate3d(0, 0, 0, 0);
+    }
+  }
 `;
 export const Right = styled.section`
   div {
     height: 20vh;
-    min-height: 200px;
+    min-height: 160px;
     width: 25vw;
     min-width: 150px;
     border: 2px solid #161515;
@@ -109,4 +132,24 @@ export const Right = styled.section`
   }
   right: 0px;
   position: absolute;
+
+  @media (max-width: 640px), (max-height: 500px) {
+    position: relative;
+
+    div {
+      text-align: center;
+      display: block;
+      width: 70vw;
+      margin: 20px auto;
+      height: 300px;
+      transform: rotate3d(0, 0, 0, 0);
+    }
+  }
+`;
+export const Bottom = styled.div`
+  width: 100vw;
+  padding-bottom: 8px;
+  :hover {
+    box-shadow: 0px 0px 0px white;
+  }
 `;
