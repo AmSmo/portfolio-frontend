@@ -75,20 +75,31 @@ export const PreviewContainer = styled.main`
   background-image: url("./static/theater.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
-
   background-position-x: center;
   background-position-y: bottom;
-  div:hover {
-    box-shadow: 3px 3px 10px white;
-    transform: rotate3d(0, 0, 0, 0);
-    transition-duration: 0.5s;
+  div.main-nav {
+    box-shadow: 5px 5px 20px white;
+    background: rgba(73, 73, 161, 0.829);
+    height: 20vh;
+    min-height: 160px;
+    width: 25vw;
+    min-width: 150px;
+    border: 2px solid #161515;
+    border-radius: 15px;
+    margin: 40px;
+    :hover {
+      box-shadow: 3px 3px 10px white;
+      transform: rotate3d(0, 0, 0, 0);
+      transition-duration: 0.5s;
+      background: rgba(73, 73, 161, 1);
+    }
   }
   section {
     padding-top: 3rem;
   }
   @media (max-width: 640px), (max-height: 500px) {
     justify-content: center;
-    height: fit-content;
+    height: 100vh;
     section {
       padding-top: 0;
     }
@@ -97,16 +108,7 @@ export const PreviewContainer = styled.main`
 
 export const Left = styled.section`
   div {
-    height: 20vh;
-    min-height: 160px;
-    width: 25vw;
-    min-width: 150px;
-    border: 2px solid #161515;
-    background: #4949a1;
-    border-radius: 15px;
-    margin: 40px;
     transform: rotate3d(30, -30, -15, 30deg);
-    box-shadow: 5px 5px 20px white;
   }
   @media (max-width: 640px), (max-height: 500px) {
     div {
@@ -119,16 +121,7 @@ export const Left = styled.section`
 `;
 export const Right = styled.section`
   div {
-    height: 20vh;
-    min-height: 160px;
-    width: 25vw;
-    min-width: 150px;
-    border: 2px solid #161515;
-    background: #4949a1;
-    border-radius: 15px;
-    margin: 40px;
     transform: rotate3d(-30, -30, 15, 30deg);
-    box-shadow: 5px 5px 20px white;
   }
   right: 0px;
   position: absolute;
@@ -153,3 +146,5 @@ export const Bottom = styled.div`
     box-shadow: 0px 0px 0px white;
   }
 `;
+
+export const ProjectBody = styled.section``;

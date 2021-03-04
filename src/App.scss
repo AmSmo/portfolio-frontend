@@ -1,0 +1,60 @@
+.App {
+  text-align: center;
+}
+
+
+.icon{
+  width: 70px;
+  height: 75px;
+  fill: rgb(59, 59, 221);
+  padding: 7px;
+  stroke: white;
+  stroke-width: 0.4px;  
+  
+}
+
+.icon:hover{
+  fill: red;  
+  transition-duration: 0.8s;
+}
+
+
+.links:hover{
+  box-shadow: none;  
+  transition-delay: 10s;  
+}
+
+.resume-icon:hover{
+  fill:white;
+  transition-duration: 1.2s;
+  stroke:rgb(168, 14, 14);
+}
+
+
+
+.code-icon{
+  
+  
+  height: 140px;
+  width: 20vw;
+  min-width: 150px;
+  padding-top:2vh;
+:hover {
+  box-shadow: 3px 3px 10px white;
+  transform: rotate3d(0, 0, 0, 0);
+  transition-duration: 0.5s;
+  background: rgba(73, 73, 161, 1);
+  
+}
+@media (max-width: 640px),
+(max-height: 500px) {
+  justify-content: center;
+  height: fit-content;
+  
+  
+  section {
+    padding-top: 0;
+  }
+}
+}
+
