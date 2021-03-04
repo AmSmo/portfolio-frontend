@@ -9,6 +9,7 @@ import {
   Right,
   Bottom,
 } from "../styles/styles";
+
 import { ReactComponent as Dev } from "../svgs/dev.svg";
 import { ReactComponent as LinkedIn } from "../svgs/linkedin.svg";
 import { ReactComponent as Git } from "../svgs/github.svg";
@@ -16,6 +17,7 @@ import { ReactComponent as Email } from "../svgs/email.svg";
 import { ReactComponent as Resume } from "../svgs/resume.svg";
 import { ReactComponent as Code } from "../svgs/code.svg";
 import { ReactComponent as Cookie } from "../svgs/cookie.svg";
+import { ReactComponent as About } from "../svgs/about.svg";
 import { Link } from "react-router-dom";
 type HomeProps = {};
 
@@ -30,7 +32,9 @@ const Home: React.FC<HomeProps> = () => {
             </ResPreview>
           </Link>
           <Link to="/about">
-            <AboutPreview className="main-nav">About</AboutPreview>
+            <AboutPreview className="main-nav">
+              <About className="about-icon" />
+            </AboutPreview>
           </Link>
         </Left>
         <Right>
@@ -51,17 +55,17 @@ const Home: React.FC<HomeProps> = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <Git className="icon" />
+            <Git className="icon scale-in-center" />
           </a>
           <a
             href="http://www.linkedin.com/in/AdamSmolenski"
             target="_blank"
             rel="noreferrer"
           >
-            <LinkedIn className="icon" />
+            <LinkedIn className="icon scale-in-center" />
           </a>
           <a href="http://www.dev.to/AmSmo" target="_blank" rel="noreferrer">
-            <Dev className="icon" />
+            <Dev className="icon scale-in-center" />
           </a>
 
           <a
@@ -69,7 +73,7 @@ const Home: React.FC<HomeProps> = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <Email className="icon" />
+            <Email className="icon scale-in-center" />
           </a>
         </Bottom>
       </PreviewContainer>
