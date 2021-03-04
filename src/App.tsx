@@ -7,7 +7,9 @@ import Resume from "./pages/Resume";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-
+import projectList from "./svgs/projects.json";
+import { ProjectType } from "./util/customtypes";
+import Food from "./pages/Food";
 const App: React.FC<{}> = () => {
   return (
     <div className="App">
@@ -24,16 +26,22 @@ const App: React.FC<{}> = () => {
             }
 
             return (
-              <TransitionGroup component={null}>
+              <TransitionGroup>
                 <CSSTransition
                   key={key}
                   classNames={pathname}
-                  appear={true}
-                  timeout={{ enter: 750, exit: 700 }}
+                  appear={false}
+                  timeout={{ enter: 1100, exit: 0 }}
                 >
                   <Switch location={location}>
-                    <Route path="/projects" component={Projects} />
+                    <Route
+                      path="/projects"
+                      render={() => (
+                        <Projects projects={projectList as [ProjectType]} />
+                      )}
+                    />
                     <Route path="/resume" component={Resume} />
+                    <Route path="/food" component={Food} />
                     <Route path="/about" component={About} />
                     <Route path="/" component={Home} />
                   </Switch>

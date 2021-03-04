@@ -6,16 +6,18 @@ export const Nav = styled.nav`
   background: #d65151;
   font-weight: 600;
   display: flexbox;
-  justify-content: space-between;
+  justify-content: space-space-between;
   color: #ffffff;
   position: fixed;
   z-index: 10;
 `;
 
 export const NavButton = styled.p`
-  width: 20vw;
   text-align: center;
-  margin: 0.4em;
+  margin: auto;
+  @media (max-width: 400px) {
+    font-size: 20px;
+  }
 `;
 
 export const RemBody = styled.section`
@@ -32,7 +34,7 @@ export const ZoomCtrl = styled.div`
   display: block;
   font-size: 3rem;
   margin-top: 0.5rem;
-  width: 100vw;
+  width: 98vw;
   margin-right: auto;
   text-align: right;
   height: 2.2rem;
@@ -104,10 +106,14 @@ export const PreviewContainer = styled.main`
       padding-top: 0;
     }
   }
+  @media (max-width: 480px) {
+    height: 100%;
+  }
 `;
 
 export const Left = styled.section`
   div {
+    padding-top: 30px;
     transform: rotate3d(30, -30, -15, 30deg);
   }
   @media (max-width: 640px), (max-height: 500px) {
@@ -121,6 +127,7 @@ export const Left = styled.section`
 `;
 export const Right = styled.section`
   div {
+    padding-top: 30px;
     transform: rotate3d(-30, -30, 15, 30deg);
   }
   right: 0px;
@@ -128,7 +135,7 @@ export const Right = styled.section`
 
   @media (max-width: 640px), (max-height: 500px) {
     position: relative;
-
+    padding-top: 10px;
     div {
       text-align: center;
       display: block;
@@ -147,4 +154,11 @@ export const Bottom = styled.div`
   }
 `;
 
-export const ProjectBody = styled.section``;
+export const ProjectBody = styled.section`
+  width: 100vw;
+  display: flexbox;
+  text-align: center;
+  justify-content: center;
+`;
+
+export const ProjectUL = styled.ul``;

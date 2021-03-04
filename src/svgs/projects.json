@@ -1,0 +1,10 @@
+[
+  {
+    "name": "FaMealy",
+    "frontend": "https://github.com/AmSmo/famealy-frontend",
+    "backend": "https://github.com/AmSmo/famealy",
+    "description": "An App solving the problem of planning a family dinner. ",
+    "video": "https://youtu.be/D8KS8ddKwOg",
+    "languages": [{ "icon": "ruby", "name": "Ruby" }]
+  }
+]

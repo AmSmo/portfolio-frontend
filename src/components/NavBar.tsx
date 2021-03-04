@@ -7,16 +7,29 @@ const NavBar: React.FC<NavBarProps> = () => {
   return (
     <Nav>
       <NavButton>
-        <NavLink to="/">Home</NavLink>
+        <NavLink className="left" to="/">
+          Home
+        </NavLink>
       </NavButton>
       <NavButton>
-        <NavLink to="/resume">Resume</NavLink>
+        <NavLink className="left" to="/food">
+          Food
+        </NavLink>
       </NavButton>
       <NavButton>
-        <NavLink to="/projects">Projects</NavLink>
+        <NavLink className="left" to="/resume">
+          Resume
+        </NavLink>
       </NavButton>
       <NavButton>
-        <NavLink to="/about">About</NavLink>
+        <NavLink className="left" to="/projects">
+          Projects
+        </NavLink>
+      </NavButton>
+      <NavButton>
+        <NavLink className="left" to="/about">
+          About
+        </NavLink>
       </NavButton>
     </Nav>
   );

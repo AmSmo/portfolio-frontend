@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 
@@ -37,18 +38,15 @@
 
 
 .code-icon{
-  
-  
   height: 140px;
   width: 20vw;
   min-width: 150px;
   padding-top:2vh;
 :hover {
-  box-shadow: 3px 3px 10px white;
-  transform: rotate3d(0, 0, 0, 0);
-  transition-duration: 0.5s;
-  background: rgba(73, 73, 161, 1);
-  
+
+  fill: red;
+  transition-duration: 1.2s;
+  stroke: rgb(168, 14, 14);
 }
 @media (max-width: 640px),
 (max-height: 500px) {
@@ -62,22 +60,30 @@
 }
 }
 
-.home-enter {
+.home-enter,
+.projects-enter,
+.resume-enter {
   opacity: 0;
 }
 
-.home-enter-active {
+.home-enter-active,
+.projects-enter-active,
+.resume-enter-active {
   opacity: 1;
-  transition: opacity 800ms ease-in;
+  transition: opacity 500ms ease-in;
 }
 
-.home-exit {
+.home-exit,
+.projects-exit ,
+.resume-exit{
   opacity: 1;
 }
 
-.home-exit-active {
+.home-exit-active,
+.projects-exit-active,
+.resume-exit-active {
   opacity: 0;
-  transition: opacity 700ms ease-in;
+  transition: opacity 400ms ease-in;
 }
 
 .scale-in-center {
@@ -116,9 +122,87 @@
 .about-icon{
   width:200px;
   height:300px;
+  stroke-width: 2em;
   @media (max-width: 800px){
     width:  150px;
     height: 280px;
     
+  }
+  :hover {
+    fill: white;
+    transition-duration: 1.2s;
+    stroke: rgb(168, 14, 14);
+    
+  }
+}
+
+
+
+.projects-enter {
+  -webkit-animation: projects-enter 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: projects-enter 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes projects-enter {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes projects-enter {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+.about-enter {
+  -webkit-animation: about-enter 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: about-enter 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes about-enter {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes about-enter {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
   }
 }
