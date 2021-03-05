@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import { RemBody, ZoomCtrl } from "../styles/styles";
 import "react-pdf/dist/umd/Page/AnnotationLayer.css";

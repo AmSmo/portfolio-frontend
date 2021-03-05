@@ -15,9 +15,10 @@ export type LanguageType = {
 
 export type ProjectType = {
   name: string;
-  frontend: string;
-  backend: string;
+  frontend?: string;
+  backend?: string;
+  deploy?: string;
   description: string;
-  video: string;
+  video?: string;
   languages: [LanguageType] | null;
 };

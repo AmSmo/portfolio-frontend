@@ -3,8 +3,59 @@
     "name": "FaMealy",
     "frontend": "https://github.com/AmSmo/famealy-frontend",
     "backend": "https://github.com/AmSmo/famealy",
-    "description": "An App solving the problem of planning a family dinner. ",
+    "description": "An App solving the problem of planning a family dinner. Through the use of the Spoonacular API to find recipes you can find something to make. The app keeps track of what ingredients you have and will let you know what you have for each recipe as well as what you need to pick up. If you are sharing a meal with friends you can schedule the day of in a calendar to make sure everyone has time to prep in the kitchen.  ",
     "video": "https://youtu.be/D8KS8ddKwOg",
-    "languages": [{ "icon": "ruby", "name": "Ruby" }]
+    "languages": [
+      { "icon": "devicon-ruby-plain colored", "name": "Ruby" },
+      { "icon": "devicon-javascript-plain", "name": "JavaScript" },
+      { "icon": "devicon-react-original-wordmark colored", "name": "React" },
+      { "icon": "devicon-rails-plain-wordmark colored", "name": "Rails" },
+      { "icon": "devicon-html5-plain-wordmark colored", "name": "HTML" },
+      { "icon": "devicon-css3-plain-wordmark colored", "name": "CSS" },
+      { "icon": "devicon-sass-original colored", "name": "SASS" },
+      {
+        "icon": "devicon-postgresql-plain-wordmark colored",
+        "name": "PostgresQL"
+      }
+    ]
+  },
+  {
+    "name": "Pictory",
+    "frontend": "https://github.com/AmSmo/pictory-frontend",
+    "backend": "https://github.com/AmSmo/pictory-backend",
+    "description": "Ever wonder what your surroundings looked like years ago, or maybe even last week? Me too. With the help of the NYPL historical archive, this app was built to do just that. Using various Ruby gems to work with photo Metadata, this app will find the location of your photo, map it, and show photos from the area. Entirely Vanilla JavaScript for the frontend to talk to a Rails backend. Postregresql holds the data that was seeded from the archive.",
+    "video": "https://youtu.be/CfV1NDopoZk",
+    "languages": [
+      { "icon": "devicon-ruby-plain colored", "name": "Ruby" },
+      { "icon": "devicon-javascript-plain", "name": "JavaScript" },
+      { "icon": "devicon-rails-plain-wordmark colored", "name": "Rails" },
+      { "icon": "devicon-html5-plain-wordmark colored", "name": "HTML" },
+      { "icon": "devicon-css3-plain-wordmark colored", "name": "CSS" },
+      { "icon": "devicon-sass-original colored", "name": "SASS" },
+      {
+        "icon": "devicon-postgresql-plain-wordmark colored",
+        "name": "PostgresQL"
+      }
+    ]
+  },
+  {
+    "name": "Bard",
+    "backend": "https://github.com/AmSmo/bard-djangowork",
+    "description": "Madlibs were a part of growing up. Shakespeare was something that came a little later. Put the two together with code and you get a fun site. Built with Natural Language Processing in Python to sort out parts of speech, randomly generates a madlib for you to fill out. You can choose specific madlibs and number of words or read the originals. The fun thing is that it'll read it back to you when you're done.",
+    "video": "https://youtu.be/0KF5oWHfIBY",
+
+    "languages": [
+      { "icon": "devicon-python-plain-wordmark colored", "name": "Python" },
+      { "icon": "devicon-javascript-plain", "name": "JavaScript" },
+      { "icon": "devicon-django-plain-wordmark colored", "name": "Django" },
+      { "icon": "devicon-googlecloud-plain-wordmark colored", "name": "GCP" },
+      { "icon": "devicon-html5-plain-wordmark colored", "name": "HTML" },
+      { "icon": "devicon-css3-plain-wordmark colored", "name": "CSS" },
+      {
+        "icon": "devicon-postgresql-plain-wordmark colored",
+        "name": "PostgresQL"
+      }
+    ],
+    "deploy": "https://bardwithbard.ue.r.appspot.com/"
   }
 ]

@@ -1,54 +1,39 @@
 body {
   margin: 0;
-  font-family: 'Raleway', 'Roboto', 'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    sans-serif;
+  font-family: "Raleway", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 1.5em;
-  
 }
 
 code {
-  font-family: 
-    monospace,
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    ;
+  font-family: monospace, source-code-pro, Menlo, Monaco, Consolas,
+    "Courier New";
 }
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
 
-
-a.left {
+.left {
   position: relative;
 }
 
-a.left:before {
+.left:before {
   content: "";
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 3px;
   bottom: 0;
   left: 0;
-  background-color: #FFF;
+  background-color: rgb(15, 54, 182);
   visibility: hidden;
   transition: all 0.5s ease-in-out;
 }
 
-a.left:hover:before {
+.left:hover:before {
   visibility: visible;
   width: 100%;
 }

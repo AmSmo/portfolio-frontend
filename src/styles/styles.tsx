@@ -10,14 +10,17 @@ export const Nav = styled.nav`
   color: #ffffff;
   position: fixed;
   z-index: 10;
+  @media (max-width: 400px) {
+    font-size: 20px;
+  }
+  @media (orientation: portrait) {
+    font-size: 18px;
+  }
 `;
 
 export const NavButton = styled.p`
   text-align: center;
   margin: auto;
-  @media (max-width: 400px) {
-    font-size: 20px;
-  }
 `;
 
 export const RemBody = styled.section`
@@ -155,10 +158,38 @@ export const Bottom = styled.div`
 `;
 
 export const ProjectBody = styled.section`
-  width: 100vw;
+  width: 95vw;
   display: flexbox;
   text-align: center;
   justify-content: center;
 `;
 
-export const ProjectUL = styled.ul``;
+export const ProjectLeft = styled.div`
+  height: 100vh;
+  align-content: flex-start;
+  width: 20vw;
+  left: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  position: fixed;
+  border-right: 1px solid black;
+  background: white;
+  h3 {
+    text-align: center;
+    width: 100%;
+    text-decoration: underline;
+    margin: 5px 0 0 0;
+  }
+`;
+
+export const ProjectUL = styled.ul`
+  padding-left: 20px;
+  li {
+    text-align: left;
+    display: block;
+    width: min-content;
+    padding: 3px;
+    cursor: pointer;
+  }
+`;
