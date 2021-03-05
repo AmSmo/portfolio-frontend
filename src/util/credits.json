@@ -51,12 +51,72 @@
     "name": "War Horse",
     "playbill": "https://bsp-static.playbill.com/dims4/default/3d598ad/2147483647/resize/x250%3C/quality/90/?url=http%3A%2F%2Fpb-asset-replication.s3.amazonaws.com%2Fe8%2Fae%2F2225e3fd4447bc4c7351d0677772%2Fwar-horse-playbill-2011-03-15-web.jpg"
   },
-  { "name": "", "playbill": "" },
-  { "name": "", "playbill": "" },
-  { "name": "", "playbill": "" },
-  { "name": "", "playbill": "" },
-  { "name": "", "playbill": "" },
-  { "name": "", "playbill": "" },
-  { "name": "", "playbill": "" },
-  { "name": "", "playbill": "" }
+  {
+    "name": "Freeman of Color",
+    "playbill": "https://bsp-static.playbill.com/dims4/default/a800dbe/2147483647/resize/x250%3C/quality/90/?url=http%3A%2F%2Fpb-asset-replication.s3.amazonaws.com%2Ff6%2F11%2Fa08337f14671af8f4afb024fd55f%2Fa-free-man-of-color-playbill-2010-10-21-web.jpg"
+  },
+  {
+    "name": "The Grand Manner",
+    "playbill": "https://www.lct.org/media/filer_public_thumbnails/filer_public/e3/c3/e3c3b88d-2329-43b0-93da-948b2f0d4daa/thegrandmanner_poster.jpg__284x50000_q85_subsampling-2.jpg"
+  },
+  {
+    "name": "When the Rain Stops Falling",
+    "playbill": "https://www.lct.org/media/filer_public_thumbnails/filer_public/da/25/da25a450-3e15-45d7-a713-04ad7feeb5cd/whentherainstopsfalling_poster.jpg__225x5000_q85_subsampling-2.jpg"
+  },
+  {
+    "name": "Brokeology",
+    "playbill": "https://www.lct.org/media/filer_public_thumbnails/filer_public/fa/a4/faa4267e-f058-48b3-a968-969d3ae88476/brokeology_poster.jpg__225x5000_q85_subsampling-2.jpg"
+  },
+  {
+    "name": "The Glorious Ones",
+    "playbill": "https://www.lct.org/media/filer_public_thumbnails/filer_public/25/78/2578790d-0154-455e-93e5-aeff01efd5c0/thegloriousones_poster.jpg__225x5000_q85_subsampling-2.jpg"
+  },
+  {
+    "name": "Happiness",
+    "playbill": "https://www.lct.org/media/filer_public_thumbnails/filer_public/41/53/4153f303-6a08-48c1-b2b0-2fa8231688ce/happiness_poster.jpg__225x5000_q85_subsampling-2.jpg"
+  },
+  {
+    "name": "Saturn Returns",
+    "playbill": "https://www.lct.org/media/filer_public_thumbnails/filer_public/65/c2/65c206ed-3c48-45dc-906b-5cd3db4a1859/saturnreturns_poster.jpg__225x5000_q85_subsampling-2.jpg"
+  },
+  {
+    "name": "The New Century",
+    "playbill": "https://www.lct.org/media/filer_public_thumbnails/filer_public/ec/c5/ecc55ea1-ee2c-4ab4-a907-0e826e8d7d99/thenewcentury_poster.jpg__225x5000_q85_subsampling-2.jpg"
+  },
+  {
+    "name": "Dying City",
+    "playbill": "https://www.lct.org/media/filer_public_thumbnails/filer_public/19/df/19df715b-db2b-4237-b735-45eae2142e00/dyingcity_poster.jpg__225x5000_q85_subsampling-2.jpg"
+  },
+  {
+    "name": "The Clean House",
+    "playbill": "https://www.lct.org/media/filer_public_thumbnails/filer_public/d6/03/d603e66e-3a68-4e07-bcdf-8ba421407000/cleanhouse_poster.jpg__225x5000_q85_subsampling-2.jpg"
+  },
+  {
+    "name": "The House In Town",
+    "playbill": "https://www.lct.org/media/filer_public_thumbnails/filer_public/8a/f1/8af1b3e5-602b-4cf7-a2c6-9194072cda2f/houseintown_poster.jpg__225x5000_q85_subsampling-2.jpg"
+  },
+  {
+    "name": "Elephant Man",
+    "playbill": "https://bsp-static.playbill.com/dims4/default/52fe79b/2147483647/resize/x250%3C/quality/90/?url=http%3A%2F%2Fpb-asset-replication.s3.amazonaws.com%2Fdf%2Fa3%2F69b6c48948b8a5f760740e45902b%2Fthe-elephant-man-playbill-2014-11-07-web.jpg"
+  },
+  {
+    "name": "42nd Street Ordway",
+    "playbill": "https://images.ctfassets.net/won472nmlkwa/4f6Ww36L2V8P3hK8CkSDeg/0f3a175508778d96e637cff566bdd3d5/OrdwayMusicTheater_photobyLauraAlpizar-2.jpg?h=160"
+  },
+  {
+    "name": "Footloose Muny",
+    "playbill": "https://bloximages.newyork1.vip.townnews.com/kmov.com/content/tncms/assets/v3/editorial/b/c4/bc46e201-270d-5e64-82f9-db3d068f0398/5b74d9e028326.image.png?resize=640%2C360"
+  },
+  {
+    "name": "Young Frankenstein Muny",
+    "playbill": "https://bloximages.newyork1.vip.townnews.com/kmov.com/content/tncms/assets/v3/editorial/b/c4/bc46e201-270d-5e64-82f9-db3d068f0398/5b74d9e028326.image.png?resize=640%2C360"
+  },
+  {
+    "name": "42nd Street Muny",
+    "playbill": "https://bloximages.newyork1.vip.townnews.com/kmov.com/content/tncms/assets/v3/editorial/b/c4/bc46e201-270d-5e64-82f9-db3d068f0398/5b74d9e028326.image.png?resize=640%2C360"
+  },
+  {
+    "name": "Fiddler On the Roof Muny",
+    "playbill": "https://bloximages.newyork1.vip.townnews.com/kmov.com/content/tncms/assets/v3/editorial/b/c4/bc46e201-270d-5e64-82f9-db3d068f0398/5b74d9e028326.image.png?resize=640%2C360"
+  }
 ]

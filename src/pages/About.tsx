@@ -30,7 +30,11 @@ const About: React.FC<AboutProps> = ({ shows }) => {
   };
   const renderCredits = () => {
     return credits.map((credit) => {
-      return <li onClick={() => setCurrentShow(credit)}>{credit.name}</li>;
+      return (
+        <li className="left" onClick={() => setCurrentShow(credit)}>
+          {credit.name}
+        </li>
+      );
     });
   };
 
