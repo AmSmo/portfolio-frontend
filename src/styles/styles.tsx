@@ -151,6 +151,17 @@ export const Bottom = styled.div`
     box-shadow: 0px 0px 0px white;
   }
 `;
+export const AboutBottom = styled.div`
+  width: 100vw;
+  justify-content: center;
+  padding: 10px;
+  .icon {
+    height: 60px;
+  }
+  :hover {
+    box-shadow: 0px 0px 0px white;
+  }
+`;
 
 export const ProjectBody = styled.section`
   width: 95vw;
@@ -184,7 +195,7 @@ export const ProjectUL = styled.ul`
     text-align: left;
     display: block;
     width: min-content;
-    padding: 3px;
+    padding: 10px;
     cursor: pointer;
   }
 `;

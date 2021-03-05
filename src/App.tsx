@@ -7,7 +7,7 @@ import Resume from "./pages/Resume";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import projectList from "./svgs/projects.json";
+import projectList from "./util/projects.json";
 import { ProjectType } from "./util/customtypes";
 import Food from "./pages/Food";
 import { Main } from "./styles/styles";

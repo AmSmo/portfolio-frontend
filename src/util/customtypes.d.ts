@@ -22,3 +22,9 @@ export type ProjectType = {
   video?: string;
   languages: [LanguageType] | null;
 };
+
+export type ShowType = {
+  playbill: string;
+  name: string;
+  position?: "Audio Engineer" | "Production Engineer" | "A1" | "A2";
+};

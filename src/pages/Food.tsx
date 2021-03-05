@@ -40,7 +40,7 @@ const Food: React.FC<FoodProps> = () => {
     ]);
   };
   const direct = (e: React.KeyboardEvent<any>) => {
-    console.dir(e.code);
+    e.preventDefault();
     if (e.code === "ArrowLeft") {
       rotate(5);
     } else if (e.code === "ArrowRight") {
@@ -50,7 +50,7 @@ const Food: React.FC<FoodProps> = () => {
         zoom: prevPosition.zoom,
         coordinates: [
           prevPosition.coordinates[0],
-          prevPosition.coordinates[1] + 5,
+          prevPosition.coordinates[1] - 5,
         ],
       }));
     } else if (e.code === "ArrowDown") {
@@ -58,7 +58,7 @@ const Food: React.FC<FoodProps> = () => {
         zoom: prevPosition.zoom,
         coordinates: [
           prevPosition.coordinates[0],
-          prevPosition.coordinates[1] - 5,
+          prevPosition.coordinates[1] + 5,
         ],
       }));
     }
@@ -84,7 +84,14 @@ const Food: React.FC<FoodProps> = () => {
           onMoveEnd={handleMoveEnd}
           onKeyDown={direct}
         >
-          <Sphere id="1" stroke="#FF5533" strokeWidth={1} fill={"#ADD8E6"} />(
+          <Sphere
+            id="1"
+            stroke="#FF5533"
+            strokeWidth={2}
+            fill={"#ADD8E6"}
+            style={{ boxShadow: "5px 5px 10px black" }}
+          />
+          (
           <Geographies geography={"./static/world.json"}>
             {({ geographies }) =>
               geographies.map((geo) => {
