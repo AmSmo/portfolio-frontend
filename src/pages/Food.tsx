@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import {
   ComposableMap,
   ZoomableGroup,
-  Sphere,
   Geographies,
+  Sphere,
   Geography,
 } from "react-simple-maps";
+import ReactTooltip from "react-tooltip";
 import { MapContainer } from "../styles/styles";
-
+import { ReactComponent as RightArrow } from "../svgs/rightarrow.svg";
+import { ReactComponent as LeftArrow } from "../svgs/leftarrow.svg";
 type FoodProps = {};
 type PositionProps = {
   coordinates: [number, number];
@@ -15,21 +17,64 @@ type PositionProps = {
 };
 
 const Food: React.FC<FoodProps> = () => {
-  const [position, setPosition] = useState<PositionProps>({
+  let [countryName, setCountryName] = useState<string>("");
+  let [position, setPosition] = useState<PositionProps>({
     coordinates: [0, 0],
     zoom: 1,
   });
+  let [rotation, setRotation] = useState<[number, number, number]>([
+    -190,
+    0,
+    0,
+  ]);
 
   const handleMoveEnd = (position: PositionProps) => {
     setPosition(position);
   };
+
+  const rotate = (direction: number) => {
+    setRotation((prevPosition) => [
+      prevPosition[0] + direction,
+      prevPosition[1],
+      prevPosition[2],
+    ]);
+  };
+  const direct = (e: React.KeyboardEvent<any>) => {
+    console.dir(e.code);
+    if (e.code === "ArrowLeft") {
+      rotate(5);
+    } else if (e.code === "ArrowRight") {
+      rotate(-5);
+    } else if (e.code === "ArrowUp") {
+      setPosition((prevPosition) => ({
+        zoom: prevPosition.zoom,
+        coordinates: [
+          prevPosition.coordinates[0],
+          prevPosition.coordinates[1] + 5,
+        ],
+      }));
+    } else if (e.code === "ArrowDown") {
+      setPosition((prevPosition) => ({
+        zoom: prevPosition.zoom,
+        coordinates: [
+          prevPosition.coordinates[0],
+          prevPosition.coordinates[1] - 5,
+        ],
+      }));
+    }
+  };
   return (
     <MapContainer>
+      <ReactTooltip>{countryName}</ReactTooltip>
+      <LeftArrow width="5vw" onClick={() => rotate(5)} />
+      <RightArrow onClick={() => rotate(-5)} width="5vw" />
+
       <h2>Under Construction</h2>
       <ComposableMap
+        data-tip=""
         className="map"
         projectionConfig={{
-          rotate: [-10, 0, 0],
+          rotate: rotation,
           scale: 180,
         }}
       >
@@ -37,31 +82,31 @@ const Food: React.FC<FoodProps> = () => {
           zoom={position.zoom}
           center={position.coordinates}
           onMoveEnd={handleMoveEnd}
+          onKeyDown={direct}
         >
           <Sphere id="1" stroke="#FF5533" strokeWidth={1} fill={"#ADD8E6"} />(
-          <Geographies geography={"./static/world-110m.json"}>
+          <Geographies geography={"./static/world.json"}>
             {({ geographies }) =>
               geographies.map((geo) => {
+                let fill = "blue";
                 return (
                   <Geography
                     key={geo.rsmKey}
                     geography={geo}
                     stroke="black"
                     strokeWidth="0.5px"
-                    fill={
-                      "lightgrey"
-                      // !Object.keys(data).includes(geo.properties.NAME_LONG)
-                      //   ? "lightgrey"
-                      //   : `rgba(${data[geo.properties.NAME_LONG] * 3},200, ${
-                      //       (data[geo.properties.NAME_LONG] * 8, 0.5)
-                      //     })`
-                    }
+                    fill={fill}
+                    onMouseEnter={() => {
+                      setCountryName(geo.properties.NAME_LONG);
+                    }}
+                    onMouseLeave={() => {
+                      setCountryName("");
+                    }}
                     style={{
                       default: { outline: "none" },
-                      hover: { outline: "none" },
+                      hover: { outline: "none", fill: "red" },
                       pressed: { outline: "none" },
                     }}
-                    onClick={() => console.log(geo.properties.NAME_LONG)}
                   />
                 );
               })

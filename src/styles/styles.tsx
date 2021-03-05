@@ -74,9 +74,9 @@ export const MiscPreview = styled.div``;
 export const PreviewContainer = styled.main`
   display: flexbox;
   flex-wrap: wrap;
-  padding-top: 3rem;
   width: 100vw;
-  height: 97vh;
+  height: 100vh;
+  padding-top: 15px;
   background-image: url("./static/theater.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -99,15 +99,10 @@ export const PreviewContainer = styled.main`
       background: rgba(73, 73, 161, 1);
     }
   }
-  section {
-    padding-top: 3rem;
-  }
+
   @media (max-width: 640px), (max-height: 500px) {
     justify-content: center;
     height: 100vh;
-    section {
-      padding-top: 0;
-    }
   }
   @media (max-width: 480px) {
     height: 100%;
@@ -204,4 +199,12 @@ export const FoodBody = styled.div`
   display: block;
   margin: auto;
   height: 70vh;
+`;
+
+export const Main = styled.div`
+  position: relative;
+  padding-top: 3rem;
+  @media (max-width: 600px) {
+    padding-top: 2rem;
+  }
 `;

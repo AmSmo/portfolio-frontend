@@ -10,11 +10,12 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import projectList from "./svgs/projects.json";
 import { ProjectType } from "./util/customtypes";
 import Food from "./pages/Food";
+import { Main } from "./styles/styles";
 const App: React.FC<{}> = () => {
   return (
     <div className="App">
       <NavBar />
-      <main style={{ position: "relative", paddingTop: "3rem" }}>
+      <Main>
         <Route
           render={({ location }) => {
             let { pathname, key } = location;
@@ -50,7 +51,7 @@ const App: React.FC<{}> = () => {
             );
           }}
         />
-      </main>
+      </Main>
     </div>
   );
 };
