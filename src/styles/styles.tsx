@@ -193,3 +193,15 @@ export const ProjectUL = styled.ul`
     cursor: pointer;
   }
 `;
+
+export const MapContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
+export const FoodBody = styled.div`
+  display: block;
+  margin: auto;
+  height: 70vh;
+`;

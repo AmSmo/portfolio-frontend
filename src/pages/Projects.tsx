@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Project from "../components/Project";
 
-import { ProjectBody, ProjectLeft, ProjectUL } from "../styles/styles";
+import { ProjectBody, ProjectUL } from "../styles/styles";
 import { ProjectType } from "../util/customtypes";
 type ProjectsProps = {
   projects: [ProjectType] | null;
