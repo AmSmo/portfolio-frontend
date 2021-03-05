@@ -252,7 +252,7 @@
 
     grid-template-columns: 20vw 60vw 20vw;
     grid-template-rows: auto 2fr auto;
-    #nav,
+
     #languages {
       overflow-y: scroll;
     }
@@ -302,4 +302,42 @@
   border: 3px solid black;
   border-radius: 15px;
   box-shadow: inset 1px 1px 10px black;
+}
+
+html body ::-webkit-scrollbar {
+  width: 4px;
+  background: red;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 30px;
+}
+::-webkit-scrollbar-button:end {
+  height: 30px;
+  width: 30%;
+}
+
+::-webkit-scrollbar-button:start {
+  height: 30px;
+  width: 30%;
+}
+
+html body ::-webkit-scrollbar-track {
+  border-radius: 8px;
+  padding-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 30px;
+}
+
+html body ::-webkit-scrollbar-thumb:hover {
+  /* background: darkblue; */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 30px;
+}
+html body ::-webkit-scrollbar-button {
+  /* background: darkblue; */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 30px;
 }

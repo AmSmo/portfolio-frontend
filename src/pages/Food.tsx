@@ -92,7 +92,7 @@ const Food: React.FC<FoodProps> = () => {
             style={{ boxShadow: "5px 5px 10px black" }}
           />
           (
-          <Geographies geography={"./static/world.json"}>
+          <Geographies geography={"./Static/world.json"}>
             {({ geographies }) =>
               geographies.map((geo) => {
                 let fill = "blue";

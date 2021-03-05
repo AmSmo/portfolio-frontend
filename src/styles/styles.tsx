@@ -77,7 +77,7 @@ export const PreviewContainer = styled.main`
   width: 100vw;
   height: 100vh;
   padding-top: 15px;
-  background-image: url("./static/theater.jpeg");
+  background-image: url("./Static/theater.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: center;
@@ -191,6 +191,7 @@ export const ProjectLeft = styled.div`
 
 export const ProjectUL = styled.ul`
   padding-left: 20px;
+  overflow-y: scroll;
   li {
     text-align: left;
     display: block;
