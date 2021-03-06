@@ -3,13 +3,15 @@ import styled from "styled-components";
 export const Nav = styled.nav`
   height: 2em;
   width: 100vw;
+  max-width: 100%;
+  padding: 0 5px;
   background: #d65151;
   font-weight: 600;
-  display: flexbox;
-  justify-content: space-space-between;
+  display: flex;
+  justify-content: space-between;
   color: #ffffff;
   position: fixed;
-  z-index: 10;
+  z-index: 9999 !important;
   @media (max-width: 400px) {
     font-size: 20px;
   }
@@ -21,16 +23,18 @@ export const Nav = styled.nav`
 export const NavButton = styled.p`
   text-align: center;
   margin: auto;
+  position: relative;
+  z-index: 30;
 `;
 
 export const RemBody = styled.section`
   margin: 5px auto;
   text-align: center;
   width: 100vw;
-  display: flexbox;
+  display: flex;
   justify-content: center;
   margin-top: 30px;
-  z-index: 3;
+  z-index: 11;
 `;
 
 export const ZoomCtrl = styled.div`
@@ -67,24 +71,49 @@ export const ZoomCtrl = styled.div`
     }
   }
 `;
-export const ResPreview = styled.div``;
-export const AboutPreview = styled.div``;
-export const ProPreview = styled.div``;
-export const MiscPreview = styled.div``;
-export const PreviewContainer = styled.main`
-  display: flexbox;
-  flex-wrap: wrap;
-  width: 100vw;
-  height: 100vh;
-  padding-top: 15px;
+export const ResPreview = styled.div`
+  background-image: url("./Static/typewriter.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
+`;
+export const AboutPreview = styled.div`
   background-image: url("./Static/theater.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom;
+`;
+export const ProPreview = styled.div`
+  background-image: url("./Static/screen.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
+`;
+export const MiscPreview = styled.div`
+  background-image: url("./Static/baked.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
+`;
+export const PreviewContainer = styled.main`
+  h1 {
+    width: 100vw;
+    color: white;
+  }
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100%;
+  position: relative;
+  background: rgba(0, 0, 0, 0.2);
   div.main-nav {
     box-shadow: 5px 5px 20px white;
-    background: rgba(73, 73, 161, 0.829);
+
     height: 20vh;
     min-height: 160px;
     width: 25vw;
@@ -95,14 +124,15 @@ export const PreviewContainer = styled.main`
     :hover {
       box-shadow: 3px 3px 10px white;
       transform: rotate3d(0, 0, 0, 0);
+      -webkit-transform: rotate3d(0, 0, 0, 0);
       transition-duration: 0.5s;
-      background: rgba(73, 73, 161, 1);
     }
   }
 
   @media (max-width: 640px), (max-height: 500px) {
     justify-content: center;
     height: 100vh;
+    max-height: 100%;
   }
   @media (max-width: 480px) {
     height: 100%;
@@ -110,9 +140,11 @@ export const PreviewContainer = styled.main`
 `;
 
 export const Left = styled.section`
+  z-index: 3;
   div {
     padding-top: 30px;
     transform: rotate3d(30, -30, -15, 30deg);
+    -webkit-transform: rotate3d(30, -30, -15, 30deg);
   }
   @media (max-width: 640px), (max-height: 500px) {
     div {
@@ -120,20 +152,22 @@ export const Left = styled.section`
       margin: 20px auto;
       height: 300px;
       transform: rotate3d(0, 0, 0, 0);
+      -webkit-transform: rotate3d(0, 0, 0, 0);
     }
   }
 `;
 export const Right = styled.section`
+  z-index: 3;
   div {
     padding-top: 30px;
     transform: rotate3d(-30, -30, 15, 30deg);
+    -webkit-transform: rotate3d(-30, -30, 15, 30deg);
   }
-  right: 0px;
-  position: absolute;
+  margin-left: auto;
 
   @media (max-width: 640px), (max-height: 500px) {
-    position: relative;
     padding-top: 10px;
+    margin: auto;
     div {
       text-align: center;
       display: block;
@@ -141,12 +175,14 @@ export const Right = styled.section`
       margin: 20px auto;
       height: 300px;
       transform: rotate3d(0, 0, 0, 0);
+      -webkit-transform: rotate3d(0, 0, 0, 0);
     }
   }
 `;
 export const Bottom = styled.div`
+  z-index: 3;
   width: 100vw;
-  padding-bottom: 8px;
+  margin-bottom: 100px;
   :hover {
     box-shadow: 0px 0px 0px white;
   }
@@ -165,13 +201,14 @@ export const AboutBottom = styled.div`
 
 export const ProjectBody = styled.section`
   width: 95vw;
-  display: flexbox;
+  display: flex;
   text-align: center;
   justify-content: center;
 `;
 
 export const ProjectLeft = styled.div`
   height: 100vh;
+  max-height: 100%;
   align-content: flex-start;
   width: 20vw;
   left: 0px;
