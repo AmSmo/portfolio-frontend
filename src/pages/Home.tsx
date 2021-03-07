@@ -5,11 +5,11 @@ import {
   ProPreview,
   ResPreview,
   PreviewContainer,
-  Left,
-  Right,
   Bottom,
+  Blurb,
+  Container,
 } from "../styles/styles";
-
+import "../styles/home.scss";
 import { ReactComponent as Dev } from "../svgs/dev.svg";
 import { ReactComponent as LinkedIn } from "../svgs/linkedin.svg";
 import { ReactComponent as Git } from "../svgs/github.svg";
@@ -18,7 +18,6 @@ import { ReactComponent as Resume } from "../svgs/resume.svg";
 import { ReactComponent as Code } from "../svgs/code.svg";
 import { ReactComponent as Cookie } from "../svgs/cookie.svg";
 import { ReactComponent as About } from "../svgs/about.svg";
-import { ReactComponent as GhostLight } from "../svgs/ghostlight2.svg";
 import { Link } from "react-router-dom";
 type HomeProps = {};
 
@@ -49,26 +48,34 @@ const Home: React.FC<HomeProps> = () => {
           turned<br></br>
           <span className="developer"> Software Developer</span>
         </h1>
-        <Left>
+
+        <Container
+          onMouseEnter={() => setResume(awake)}
+          onMouseLeave={() => setResume(sleepy)}
+        >
           <Link to="/resume">
-            <ResPreview
-              onMouseEnter={() => setResume(awake)}
-              onMouseLeave={() => setResume(sleepy)}
-              className="main-nav theater"
-              style={{
-                fill: resume.fill,
-                stroke: resume.stroke,
-                transitionDuration: "01.2s",
-              }}
-            >
-              <Resume className="resume-icon" />
+            <ResPreview className="main-nav left-card">
+              <Resume
+                className="resume-icon"
+                style={{
+                  fill: resume.fill,
+                  stroke: resume.stroke,
+                  transitionDuration: "1.2s",
+                  zIndex: 3,
+                }}
+              />
             </ResPreview>
           </Link>
+          <Blurb>MEOW</Blurb>
+        </Container>
+        <Container
+          onMouseEnter={() => setAbout(awake)}
+          onMouseLeave={() => setAbout(sleepy)}
+        >
+          <Blurb></Blurb>
           <Link to="/about">
             <AboutPreview
-              className="main-nav theater"
-              onMouseEnter={() => setAbout(awake)}
-              onMouseLeave={() => setAbout(sleepy)}
+              className="main-nav right-card"
               style={{
                 fill: about.fill,
                 stroke: about.stroke,
@@ -78,37 +85,43 @@ const Home: React.FC<HomeProps> = () => {
               <About className="about-icon" />
             </AboutPreview>
           </Link>
-        </Left>
-        <Right>
+        </Container>
+        <Container
+          onMouseEnter={() => setCode(awake)}
+          onMouseLeave={() => setCode(sleepy)}
+        >
           <Link to="/projects">
-            <ProPreview
-              className="main-nav"
-              onMouseEnter={() => setCode(awake)}
-              onMouseLeave={() => setCode(sleepy)}
-              style={{
-                fill: code.fill,
-                stroke: code.stroke,
-                transitionDuration: "1.2s",
-              }}
-            >
-              <Code className="code-icon" />
+            <ProPreview className="main-nav left-card">
+              <Code
+                className="code-icon"
+                style={{
+                  fill: code.fill,
+                  stroke: code.stroke,
+                  transitionDuration: "1.2s",
+                  zIndex: 3,
+                }}
+              />
             </ProPreview>
           </Link>
+        </Container>
+        <Container
+          onMouseEnter={() => setFood({ fill: "#D4B783", stroke: "white" })}
+          onMouseLeave={() => setFood(sleepy)}
+        >
+          <Blurb>BLUE</Blurb>
           <Link to="/food">
-            <MiscPreview
-              className="main-nav"
-              onMouseEnter={() => setFood({ fill: "#D4B783", stroke: "white" })}
-              onMouseLeave={() => setFood(sleepy)}
-              style={{
-                fill: food.fill,
-                stroke: food.stroke,
-                transitionDuration: "1.2s",
-              }}
-            >
-              <Cookie className="resume-icon" />
+            <MiscPreview className="main-nav right-card">
+              <Cookie
+                className="resume-icon"
+                style={{
+                  fill: food.fill,
+                  stroke: food.stroke,
+                  transitionDuration: "1.2s",
+                }}
+              />
             </MiscPreview>
           </Link>
-        </Right>
+        </Container>
         <Bottom className="links">
           <a
             href="http://www.github.com/AmSmo"
@@ -136,7 +149,6 @@ const Home: React.FC<HomeProps> = () => {
             <Email className="icon scale-in-center" />
           </a>
         </Bottom>
-        <GhostLight className="ghostlight" />
       </PreviewContainer>
     </>
   );

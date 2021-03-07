@@ -4,8 +4,8 @@ export const Nav = styled.nav`
   height: 2em;
   width: 100vw;
   max-width: 100%;
-  padding: 0 5px;
-  background: #d65151;
+
+  background: #db504a;
   font-weight: 600;
   display: flex;
   justify-content: space-between;
@@ -71,7 +71,23 @@ export const ZoomCtrl = styled.div`
     }
   }
 `;
+
+export const Blurb = styled.div`
+  width: 100vw;
+  padding: 30px;
+`;
+export const Container = styled.div`
+  background: #56a3a6;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10vh 0;
+  border: 1px #858080 solid;
+  box-shadow: 1px 3px 5px #4f6d7a;
+  width: 65vw;
+  display: flex;
+`;
 export const ResPreview = styled.div`
+  display: flex;
   background-image: url("./Static/typewriter.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -110,7 +126,9 @@ export const PreviewContainer = styled.main`
   height: 100vh;
   max-height: 100%;
   position: relative;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgb(247, 244, 244);
+  background-size: 100vh;
+  justify-content: center;
   div.main-nav {
     box-shadow: 5px 5px 20px white;
 
@@ -125,7 +143,7 @@ export const PreviewContainer = styled.main`
       box-shadow: 3px 3px 10px white;
       transform: rotate3d(0, 0, 0, 0);
       -webkit-transform: rotate3d(0, 0, 0, 0);
-      transition-duration: 0.5s;
+      transition-duration: 1.2s;
     }
   }
 
@@ -139,49 +157,10 @@ export const PreviewContainer = styled.main`
   }
 `;
 
-export const Left = styled.section`
-  z-index: 3;
-  div {
-    padding-top: 30px;
-    transform: rotate3d(30, -30, -15, 30deg);
-    -webkit-transform: rotate3d(30, -30, -15, 30deg);
-  }
-  @media (max-width: 640px), (max-height: 500px) {
-    div {
-      width: 70vw;
-      margin: 20px auto;
-      height: 300px;
-      transform: rotate3d(0, 0, 0, 0);
-      -webkit-transform: rotate3d(0, 0, 0, 0);
-    }
-  }
-`;
-export const Right = styled.section`
-  z-index: 3;
-  div {
-    padding-top: 30px;
-    transform: rotate3d(-30, -30, 15, 30deg);
-    -webkit-transform: rotate3d(-30, -30, 15, 30deg);
-  }
-  margin-left: auto;
-
-  @media (max-width: 640px), (max-height: 500px) {
-    padding-top: 10px;
-    margin: auto;
-    div {
-      text-align: center;
-      display: block;
-      width: 70vw;
-      margin: 20px auto;
-      height: 300px;
-      transform: rotate3d(0, 0, 0, 0);
-      -webkit-transform: rotate3d(0, 0, 0, 0);
-    }
-  }
-`;
 export const Bottom = styled.div`
   z-index: 3;
   width: 100vw;
+  max-width: 100%;
   margin-bottom: 100px;
   :hover {
     box-shadow: 0px 0px 0px white;
@@ -190,7 +169,7 @@ export const Bottom = styled.div`
 export const AboutBottom = styled.div`
   width: 100vw;
   justify-content: center;
-  padding: 10px;
+
   .icon {
     height: 60px;
   }
@@ -253,7 +232,7 @@ export const FoodBody = styled.div`
 export const Main = styled.div`
   position: relative;
   padding-top: 3rem;
-  @media (max-width: 600px) {
+  @media (max-width: 640px) {
     padding-top: 2rem;
   }
 `;
