@@ -20,14 +20,6 @@
   box-shadow: none;
   transition-delay: 10s;
 }
-.resume-icon {
-  @media (min-width: 600px) {
-    padding-left: 20px;
-  }
-  padding-top: 3px;
-  height: 135px;
-  margin: 0 auto;
-}
 
 .code-icon {
   height: 140px;
@@ -101,16 +93,6 @@
     -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1;
-  }
-}
-
-.about-icon {
-  width: 200px;
-  height: 180px;
-  stroke-width: 2em;
-  @media (max-width: 800px) {
-    width: 150px;
-    height: 170px;
   }
 }
 

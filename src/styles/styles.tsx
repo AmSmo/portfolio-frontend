@@ -5,11 +5,14 @@ export const Nav = styled.nav`
   width: 100vw;
   max-width: 100%;
 
-  background: #db504a;
-  font-weight: 600;
+  /* background: #db504a; */
+  background: white;
+  color: #c54b4b;
+  border-bottom: 0.5px solid lightgrey;
+  box-shadow: 0 2px 2px -2px gray;
+  font-weight: 700;
   display: flex;
   justify-content: space-between;
-  color: #ffffff;
   position: fixed;
   z-index: 9999 !important;
   @media (max-width: 400px) {
@@ -73,8 +76,27 @@ export const ZoomCtrl = styled.div`
 `;
 
 export const Blurb = styled.div`
-  width: 100vw;
-  padding: 30px;
+  display: inline;
+  color: #110101;
+  background: rgba(207, 200, 200, 0.452);
+  border-radius: 10px;
+  font-weight: 500;
+  padding: 20px 5px;
+  width: 60%;
+  margin: 20px;
+  height: min-content;
+  :before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+    filter: blur(10px);
+  }
 `;
 export const Container = styled.div`
   background: #56a3a6;
@@ -93,6 +115,8 @@ export const ResPreview = styled.div`
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom;
+  width: 80vw;
+  height: 30vh;
 `;
 export const AboutPreview = styled.div`
   background-image: url("./Static/theater.jpeg");
@@ -130,19 +154,21 @@ export const PreviewContainer = styled.main`
   background-size: 100vh;
   justify-content: center;
   div.main-nav {
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    display: flex;
     box-shadow: 5px 5px 20px white;
-
-    height: 20vh;
-    min-height: 160px;
-    width: 25vw;
-    min-width: 150px;
+    height: 40vh;
+    min-height: 220px;
+    width: 60vw;
+    min-width: 250px;
     border: 2px solid #161515;
     border-radius: 15px;
     margin: 40px;
     :hover {
       box-shadow: 3px 3px 10px white;
-      transform: rotate3d(0, 0, 0, 0);
-      -webkit-transform: rotate3d(0, 0, 0, 0);
+
       transition-duration: 1.2s;
     }
   }
