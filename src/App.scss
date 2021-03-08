@@ -179,8 +179,10 @@
   }
   ul {
     display: flex;
+    flex-wrap: wrap;
     margin-top: 0px;
     li.left {
+      width: 90%;
       margin-top: 4px 10px;
     }
   }
@@ -230,7 +232,7 @@
       overflow-y: scroll;
     }
   }
-  @media (orientation: portrait) {
+  @media (orientation: portrait), (max-width: 680px) and (max-height: 400px) {
     display: grid;
     grid-template-areas:
       "links links"
@@ -255,8 +257,12 @@
       ul {
         display: flex;
         width: 90vw;
-        li {
-          margin: 30px;
+        // width: fit-conent;
+        margin: auto;
+        li.left {
+          display: block;
+          margin: auto;
+          width: min-content;
         }
       }
     }
