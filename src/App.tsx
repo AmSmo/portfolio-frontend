@@ -27,7 +27,7 @@ const App: React.FC<{}> = () => {
             }
 
             return (
-              <TransitionGroup style={{ width: "100vw" }}>
+              <TransitionGroup style={{ width: "95%" }}>
                 <CSSTransition
                   key={key}
                   classNames={pathname}

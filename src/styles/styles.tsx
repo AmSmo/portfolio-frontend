@@ -155,7 +155,7 @@ export const PreviewContainer = styled.main`
     justify-content: center;
     align-items: center;
     display: flex;
-    box-shadow: 5px 5px 20px white;
+    box-shadow: 5px 5px 20px black;
     height: 40vh;
     min-height: 220px;
     width: 60vw;
@@ -163,13 +163,13 @@ export const PreviewContainer = styled.main`
     border: 2px solid #161515;
     border-radius: 15px;
     margin: 40px;
+    transition-duration: 2s;
     @media (max-width: 650px) {
       height: 60vw;
     }
     :hover {
       box-shadow: 3px 3px 10px white;
-
-      transition-duration: 1.2s;
+      transition-duration: 2s;
     }
   }
 
@@ -193,7 +193,7 @@ export const Bottom = styled.div`
   }
 `;
 export const AboutBottom = styled.div`
-  width: 100vw;
+  width: 98vw;
   justify-content: center;
 
   .icon {

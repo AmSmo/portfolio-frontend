@@ -173,10 +173,12 @@
 
 #nav {
   grid-area: nav;
+
   h3 {
     margin-bottom: 2px;
   }
   ul {
+    display: flex;
     margin-top: 0px;
     li.left {
       margin-top: 4px 10px;
@@ -260,6 +262,10 @@
     }
     #video {
       width: 90vw;
+    }
+    #nav {
+      display: flex;
+      flex-wrap: wrap;
     }
   }
 }
