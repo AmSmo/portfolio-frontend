@@ -5,14 +5,14 @@
 .icon {
   width: 70px;
   height: 75px;
-  fill: rgb(59, 59, 221);
+  fill: red;
   padding: 7px;
   stroke: white;
   stroke-width: 0.4px;
 }
 
 .icon:hover {
-  fill: red;
+  fill: rgb(85, 154, 159);
   transition-duration: 0.8s;
 }
 

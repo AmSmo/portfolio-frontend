@@ -18,21 +18,21 @@ import { ReactComponent as Resume } from "../svgs/resume.svg";
 import { ReactComponent as Code } from "../svgs/code.svg";
 import { ReactComponent as Cookie } from "../svgs/cookie.svg";
 import { ReactComponent as About } from "../svgs/about.svg";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 type HomeProps = RouteComponentProps & {};
 
 type IconType = {
-  stroke: "red" | "transparent" | "white";
-  fill: "white" | "transparent" | "#D4B783" | "black";
+  stroke: "black" | "transparent" | "white" | "red";
+  fill: "white" | "transparent" | "#D4B783" | "black" | "red";
 };
 
 const Home: React.FC<HomeProps> = (props) => {
   let sleepy: IconType = { stroke: "transparent", fill: "transparent" };
-  let awake: IconType = { stroke: "red", fill: "white" };
   let [about, setAbout] = useState<IconType>(sleepy);
   let [resume, setResume] = useState<IconType>(sleepy);
   let [food, setFood] = useState<IconType>(sleepy);
   let [code, setCode] = useState<IconType>(sleepy);
+  let [cookieIndex, setCookieIndex] = useState<number>(3);
   let { history } = props;
   return (
     <>
@@ -46,14 +46,15 @@ const Home: React.FC<HomeProps> = (props) => {
           }}
         >
           <span className="broadway">Broadway Audio Engineer</span> <br></br>
-          turned<br></br>
+          <span style={{ color: "rgb(85,154,159)" }}>turned</span>
+          <br></br>
           <span className="developer"> Software Developer</span>
         </h1>
 
         <ResPreview
           className="main-nav"
           onClick={() => history.push("/resume")}
-          onMouseEnter={() => setResume({ fill: "black", stroke: "white" })}
+          onMouseEnter={() => setResume({ fill: "white", stroke: "red" })}
           onMouseLeave={() => setResume(sleepy)}
         >
           <Blurb>
@@ -61,7 +62,7 @@ const Home: React.FC<HomeProps> = (props) => {
             seeking out challenges. Check out my resume to see what I've done.
           </Blurb>
           <Resume
-            className="resume-icon"
+            className="svg-icon"
             style={{
               fill: resume.fill,
               stroke: resume.stroke,
@@ -74,18 +75,18 @@ const Home: React.FC<HomeProps> = (props) => {
         </ResPreview>
 
         <AboutPreview
+          className="main-nav"
           onClick={() => history.push("/about")}
-          className="main-nav right-card"
-          onMouseEnter={() => setAbout({ fill: "black", stroke: "white" })}
+          onMouseEnter={() => setAbout({ fill: "white", stroke: "red" })}
           onMouseLeave={() => setAbout(sleepy)}
         >
           <Blurb>
-            Read a little about me here. Scroll through some playbills from my
-            past. Read about how I ended up in code, and see some technologies
-            I'm working with.
+            Read a little about me here. Scroll through playbills from my past.
+            Find out about how I ended up in code, and what technologies I'm
+            working with.
           </Blurb>
           <About
-            className="about-icon"
+            className="svg-icon"
             style={{
               fill: about.fill,
               stroke: about.stroke,
@@ -97,27 +98,55 @@ const Home: React.FC<HomeProps> = (props) => {
           />
         </AboutPreview>
 
-        <ProPreview className="main-nav left-card">
+        <ProPreview
+          className="main-nav"
+          onClick={() => history.push("/projects")}
+          onMouseEnter={() => setCode({ fill: "white", stroke: "red" })}
+          onMouseLeave={() => setCode(sleepy)}
+        >
+          <Blurb>
+            Read up on past projects of mine and enjoy some video walk throughs.
+            Watching the videos you may understand how I ended up backstage.
+          </Blurb>
           <Code
-            className="code-icon"
-            onClick={() => history.push("/projects")}
+            className="svg-icon"
             style={{
               fill: code.fill,
               stroke: code.stroke,
               transitionDuration: "1.2s",
               zIndex: 3,
+              marginBottom: 0,
+              position: "absolute",
             }}
           />
         </ProPreview>
 
-        <MiscPreview className="main-nav right-card">
+        <MiscPreview
+          className="main-nav"
+          onClick={() => history.push("/projects")}
+          onMouseEnter={() => {
+            setFood({ fill: "#D4B783", stroke: "red" });
+            setCookieIndex(4);
+          }}
+          onMouseLeave={() => {
+            setFood(sleepy);
+            setCookieIndex(3);
+          }}
+        >
+          <Blurb style={{ zIndex: 4 }}>
+            A project in a project... Eventually this will keep track of what
+            I'm cooking and baking.
+          </Blurb>
           <Cookie
             onClick={() => history.push("/food")}
-            className="resume-icon"
+            className="svg-icon"
             style={{
               fill: food.fill,
               stroke: food.stroke,
               transitionDuration: "1.2s",
+              zIndex: cookieIndex,
+              marginBottom: 0,
+              position: "absolute",
             }}
           />
         </MiscPreview>

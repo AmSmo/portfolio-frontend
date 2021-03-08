@@ -78,24 +78,21 @@ export const ZoomCtrl = styled.div`
 export const Blurb = styled.div`
   display: inline;
   color: #110101;
-  background: rgba(207, 200, 200, 0.452);
+  background: rgba(207, 200, 200, 0.9);
   border-radius: 10px;
-  font-weight: 500;
+  font-weight: 600;
   padding: 20px 5px;
   width: 60%;
   margin: 20px;
   height: min-content;
-  :before {
-    content: "";
-    position: absolute;
-    background: inherit;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
-    filter: blur(10px);
+  font-size: 1.5rem;
+  @media (max-width: 700px) {
+    font-size: 1.2rem;
+    width: 75%;
+  }
+  @media (max-width: 480) and (orientation: portait) {
+    font-size: 1.1rem;
+    width: 75%;
   }
 `;
 export const Container = styled.div`
@@ -166,6 +163,9 @@ export const PreviewContainer = styled.main`
     border: 2px solid #161515;
     border-radius: 15px;
     margin: 40px;
+    @media (max-width: 650px) {
+      height: 60vw;
+    }
     :hover {
       box-shadow: 3px 3px 10px white;
 

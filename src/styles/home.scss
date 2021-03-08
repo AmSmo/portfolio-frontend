@@ -36,21 +36,18 @@
 //   }
 // }
 
-.resume-icon {
-  @media (min-width: 600px) {
-    padding-left: 20px;
+.svg-icon {
+  @media (max-width: 600px) {
+    max-width: 50%;
   }
   padding-top: 3px;
   height: 30vh;
   margin: 0 auto;
 }
 
-.about-icon {
-  height: 30vh;
-
-  margin: 0 auto;
-  @media (max-width: 800px) {
-    // width: 150px;
-    // height: 170px;
+.resume-icon {
+  @media (max-width: 600px) {
+    padding-left: 20px;
+    max-width: 50%;
   }
 }
