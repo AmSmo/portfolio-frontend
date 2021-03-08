@@ -4,10 +4,8 @@ export const Nav = styled.nav`
   height: 2em;
   width: 100vw;
   max-width: 100%;
-
-  /* background: #db504a; */
   background: white;
-  color: #c54b4b;
+  color: #a66b6a;
   border-bottom: 0.5px solid lightgrey;
   box-shadow: 0 2px 2px -2px gray;
   font-weight: 700;
@@ -23,7 +21,7 @@ export const Nav = styled.nav`
   }
 `;
 
-export const NavButton = styled.p`
+export const NavStyle = styled.p`
   text-align: center;
   margin: auto;
   position: relative;
@@ -81,7 +79,8 @@ export const Blurb = styled.div`
   background: rgba(207, 200, 200, 0.9);
   border-radius: 10px;
   font-weight: 600;
-  padding: 20px 5px;
+  margin: 15px 10px;
+  padding: 10px 5px;
   width: 60%;
   margin: 20px;
   height: min-content;
@@ -150,29 +149,6 @@ export const PreviewContainer = styled.main`
   background: rgb(247, 244, 244);
   background-size: 100vh;
   justify-content: center;
-  div.main-nav {
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    box-shadow: 5px 5px 20px black;
-    height: 40vh;
-    min-height: 220px;
-    width: 60vw;
-    min-width: 250px;
-    border: 2px solid #161515;
-    border-radius: 15px;
-    margin: 40px;
-    transition-duration: 2s;
-    @media (max-width: 650px) {
-      height: 60vw;
-    }
-    :hover {
-      box-shadow: 3px 3px 10px white;
-      transition-duration: 2s;
-    }
-  }
-
   @media (max-width: 640px), (max-height: 500px) {
     justify-content: center;
     height: 100vh;

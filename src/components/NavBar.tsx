@@ -1,36 +1,16 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import { Nav, NavButton } from "../styles/styles";
+import { Nav } from "../styles/styles";
+import NavButton from "./NavButton";
 type NavBarProps = {};
 
 const NavBar: React.FC<NavBarProps> = () => {
   return (
     <Nav>
-      <NavButton>
-        <NavLink className="left" to="/">
-          Home
-        </NavLink>
-      </NavButton>
-      <NavButton>
-        <NavLink className="left" to="/food">
-          Food
-        </NavLink>
-      </NavButton>
-      <NavButton>
-        <NavLink className="left" to="/resume">
-          Resume
-        </NavLink>
-      </NavButton>
-      <NavButton>
-        <NavLink className="left" to="/projects">
-          Projects
-        </NavLink>
-      </NavButton>
-      <NavButton>
-        <NavLink className="left" to="/about">
-          About
-        </NavLink>
-      </NavButton>
+      <NavButton link="/" name="Home" />
+      <NavButton link="/food" name="Food" />
+      <NavButton link="/resume" name="Resume" />
+      <NavButton link="/projects" name="Projects" />
+      <NavButton link="/about" name="About" />
     </Nav>
   );
 };

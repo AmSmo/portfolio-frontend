@@ -434,27 +434,12 @@ html body ::-webkit-scrollbar-button {
 }
 
 .broadway {
-  color: mix(rgb(156, 112, 112), #d55151, 85%);
+  color: black;
   font-size: 3rem;
   font-weight: 900;
-  text-shadow: -0.0075em 0.0075em 0 mix(rgb(156, 112, 112), #d55151, 94%),
-    0.005em 0.005em 0 mix(rgb(156, 112, 112), #d55151, 60%),
-    0.015em 0.015em mix(rgb(156, 112, 112), #d55151, 64%),
-    0.02em 0.02em 0 mix(rgb(156, 112, 112), #d55151, 66%),
-    0.025em 0.025em 0 mix(rgb(156, 112, 112), #d55151, 68%),
-    0.03em 0.03em 0 mix(rgb(156, 112, 112), #d55151, 70%),
-    0.035em 0.035em 0 mix(rgb(156, 112, 112), #d55151, 72%);
 }
 .developer {
-  color: mix(#56a3a6, #4f6d7a, 85%);
+  color: black;
   font-size: 3rem;
   font-weight: 900;
-  text-shadow: -0.0075em 0.0075em 0 mix(#56a3a6, #4f6d7a, 94%),
-    0.005em 0.005em 0 mix(#56a3a6, #4f6d7a, 60%),
-    0.01em 0.01em 0 mix(#56a3a6, #4f6d7a, 62%),
-    0.015em 0.015em mix(#56a3a6, #4f6d7a, 64%),
-    0.02em 0.02em 0 mix(#56a3a6, #4f6d7a, 66%),
-    0.025em 0.025em 0 mix(#56a3a6, #4f6d7a, 68%),
-    0.03em 0.03em 0 mix(#56a3a6, #4f6d7a, 70%),
-    0.035em 0.035em 0 mix(#56a3a6, #4f6d7a, 72%);
 }

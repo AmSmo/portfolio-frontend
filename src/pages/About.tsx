@@ -1,15 +1,11 @@
 import React, { useState } from "react";
 
 import { ShowType } from "../util/customtypes";
-import { AboutBottom } from "../styles/styles";
 
-import { ReactComponent as Dev } from "../svgs/dev.svg";
-import { ReactComponent as LinkedIn } from "../svgs/linkedin.svg";
-import { ReactComponent as Git } from "../svgs/github.svg";
-import { ReactComponent as Email } from "../svgs/email.svg";
 import languages from "../util/languages.json";
 import credits from "../util/credits.json";
 import "../styles/about.scss";
+import ContactLinks from "../components/ContactLinks";
 type AboutProps = {
   shows: [ShowType] | null;
 };
@@ -109,29 +105,8 @@ const About: React.FC<AboutProps> = ({ shows }) => {
           </section>
         </div>
       </div>
-      <AboutBottom>
-        <a href="http://www.github.com/AmSmo" target="_blank" rel="noreferrer">
-          <Git className="icon scale-in-center" />
-        </a>
-        <a
-          href="http://www.linkedin.com/in/AdamSmolenski"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <LinkedIn className="icon scale-in-center" />
-        </a>
-        <a href="http://www.dev.to/AmSmo" target="_blank" rel="noreferrer">
-          <Dev className="icon scale-in-center" />
-        </a>
 
-        <a
-          href="mailto:adam.smolenski@gmail.com"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Email className="icon scale-in-center" />
-        </a>
-      </AboutBottom>
+      <ContactLinks />
     </>
   );
 };

@@ -5,25 +5,22 @@ import {
   ProPreview,
   ResPreview,
   PreviewContainer,
-  Bottom,
   Blurb,
 } from "../styles/styles";
 import "../styles/home.scss";
 import { RouteComponentProps } from "react-router";
-import { ReactComponent as Dev } from "../svgs/dev.svg";
-import { ReactComponent as LinkedIn } from "../svgs/linkedin.svg";
-import { ReactComponent as Git } from "../svgs/github.svg";
-import { ReactComponent as Email } from "../svgs/email.svg";
+
 import { ReactComponent as Resume } from "../svgs/resume.svg";
 import { ReactComponent as Code } from "../svgs/code.svg";
 import { ReactComponent as Cookie } from "../svgs/cookie.svg";
 import { ReactComponent as About } from "../svgs/about.svg";
 import { withRouter } from "react-router-dom";
+import ContactLinks from "../components/ContactLinks";
 type HomeProps = RouteComponentProps & {};
 
 type IconType = {
-  stroke: "black" | "transparent" | "white" | "red";
-  fill: "white" | "transparent" | "#D4B783" | "black" | "red";
+  stroke: "transparent" | "rgba(216, 212, 204, 0.651)";
+  fill: "white" | "transparent" | "#D4B783";
 };
 
 const Home: React.FC<HomeProps> = (props) => {
@@ -46,7 +43,7 @@ const Home: React.FC<HomeProps> = (props) => {
           }}
         >
           <span className="broadway">Broadway Audio Engineer</span> <br></br>
-          <span style={{ color: "rgb(85,154,159)" }}>turned</span>
+          <span style={{ color: "black" }}>turned</span>
           <br></br>
           <span className="developer"> Software Developer</span>
         </h1>
@@ -54,7 +51,9 @@ const Home: React.FC<HomeProps> = (props) => {
         <ResPreview
           className="main-nav"
           onClick={() => history.push("/resume")}
-          onMouseEnter={() => setResume({ fill: "white", stroke: "red" })}
+          onMouseEnter={() =>
+            setResume({ fill: "white", stroke: "rgba(216, 212, 204, 0.651)" })
+          }
           onMouseLeave={() => setResume(sleepy)}
         >
           <Blurb>
@@ -70,6 +69,7 @@ const Home: React.FC<HomeProps> = (props) => {
               zIndex: 3,
               marginBottom: 0,
               position: "absolute",
+              boxShadow: "none",
             }}
           />
         </ResPreview>
@@ -77,7 +77,9 @@ const Home: React.FC<HomeProps> = (props) => {
         <AboutPreview
           className="main-nav"
           onClick={() => history.push("/about")}
-          onMouseEnter={() => setAbout({ fill: "white", stroke: "red" })}
+          onMouseEnter={() =>
+            setAbout({ fill: "white", stroke: "rgba(216, 212, 204, 0.651)" })
+          }
           onMouseLeave={() => setAbout(sleepy)}
         >
           <Blurb>
@@ -94,6 +96,7 @@ const Home: React.FC<HomeProps> = (props) => {
               zIndex: 3,
               marginBottom: 0,
               position: "absolute",
+              boxShadow: "none",
             }}
           />
         </AboutPreview>
@@ -101,11 +104,13 @@ const Home: React.FC<HomeProps> = (props) => {
         <ProPreview
           className="main-nav"
           onClick={() => history.push("/projects")}
-          onMouseEnter={() => setCode({ fill: "white", stroke: "red" })}
+          onMouseEnter={() =>
+            setCode({ fill: "white", stroke: "rgba(216, 212, 204, 0.651)" })
+          }
           onMouseLeave={() => setCode(sleepy)}
         >
           <Blurb>
-            Read up on past projects of mine and enjoy some video walk throughs.
+            Read up on past projects of mine and enjoy some video walk-throughs.
             Watching the videos you may understand how I ended up backstage.
           </Blurb>
           <Code
@@ -117,6 +122,7 @@ const Home: React.FC<HomeProps> = (props) => {
               zIndex: 3,
               marginBottom: 0,
               position: "absolute",
+              boxShadow: "none",
             }}
           />
         </ProPreview>
@@ -125,12 +131,12 @@ const Home: React.FC<HomeProps> = (props) => {
           className="main-nav"
           onClick={() => history.push("/projects")}
           onMouseEnter={() => {
-            setFood({ fill: "#D4B783", stroke: "red" });
+            setFood({ fill: "#D4B783", stroke: "rgba(216, 212, 204, 0.651)" });
             setCookieIndex(4);
           }}
           onMouseLeave={() => {
             setFood(sleepy);
-            setCookieIndex(3);
+            setCookieIndex(1);
           }}
         >
           <Blurb style={{ zIndex: 4 }}>
@@ -147,37 +153,12 @@ const Home: React.FC<HomeProps> = (props) => {
               zIndex: cookieIndex,
               marginBottom: 0,
               position: "absolute",
+              boxShadow: "none",
             }}
           />
         </MiscPreview>
 
-        <Bottom className="links">
-          <a
-            href="http://www.github.com/AmSmo"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Git className="icon scale-in-center" />
-          </a>
-          <a
-            href="http://www.linkedin.com/in/AdamSmolenski"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <LinkedIn className="icon scale-in-center" />
-          </a>
-          <a href="http://www.dev.to/AmSmo" target="_blank" rel="noreferrer">
-            <Dev className="icon scale-in-center" />
-          </a>
-
-          <a
-            href="mailto:adam.smolenski@gmail.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Email className="icon scale-in-center" />
-          </a>
-        </Bottom>
+        <ContactLinks />
       </PreviewContainer>
     </>
   );
