@@ -9,9 +9,9 @@ type ProjectsProps = {
 
 const Projects: React.FC<ProjectsProps> = ({ projects }) => {
   const renderList = () => {
-    return projects?.map((project) => {
+    return projects?.map((project, idx ) => {
       return (
-        <li className="left" onClick={() => setCurrentProject(project)}>
+        <li key={idx} className="left" onClick={() => setCurrentProject(project)}>
           {project.name}
         </li>
       );

@@ -16,18 +16,18 @@ const About: React.FC<AboutProps> = ({ shows }) => {
     playbill: "./Static/me.jpg",
   });
   const renderLanguages = () => {
-    return languages.map((language) => {
+    return languages.map((language, idx) => {
       return (
-        <li>
+        <li key={idx}>
           <i className={language.icon}>{language.name}</i>
         </li>
       );
     });
   };
   const renderCredits = () => {
-    return credits.map((credit) => {
+    return credits.map((credit, idx) => {
       return (
-        <li className="left" onClick={() => setCurrentShow(credit)}>
+        <li key={idx} className="left" onClick={() => setCurrentShow(credit)}>
           {credit.name}
         </li>
       );

@@ -12,9 +12,9 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
     return <div>Nothing to see Here</div>;
   } else {
     const renderLanguages = () => {
-      return project.languages?.map((language) => {
+      return project.languages?.map((language, idx) => {
         return (
-          <li>
+          <li key={idx}>
             <i className={language.icon}>{language.name}</i>
           </li>
         );
