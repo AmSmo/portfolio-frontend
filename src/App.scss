@@ -443,3 +443,16 @@ html body ::-webkit-scrollbar-button {
   font-size: 3rem;
   font-weight: 900;
 }
+
+
+#mapid{
+  text-align: center;
+  display: flex;
+  margin-top:50px;
+  justify-content: center;
+}
+
+.leaflet-container{
+  height:600px;
+  width: 900px;
+}
