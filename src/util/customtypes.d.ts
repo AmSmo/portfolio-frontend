@@ -8,6 +8,8 @@ export type SwitchProps = {
   location: Location;
 };
 
+
+
 export type LanguageType = {
   icon: string;
   name: string;
