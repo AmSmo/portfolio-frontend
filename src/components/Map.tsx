@@ -7,13 +7,45 @@ type MapProps = {
 }
 
 const Map:React.FC<MapProps> = () => {
-   
+    const data = {"United States": [1,23,4,5], "Australia": [1,], "Poland": [0,1,2,3,4,5,6,7,78,8,9,0,1]}   
       
+    const select = (layer) => {
+      layer.setStyle({
+            weight: 1,
+            color: "red",
+            border: "1px solid black",
+            fillOpacity: 1
+      })
+    }
+    const unselect = (layer, feature, data ) => {
+      if (data[feature.properties.NAME] !== undefined){
+        let times = data[feature.properties.NAME].length
+          layer.setStyle({
+          weight: 1,
+            color: times > 10 ? "green" : "yellow",
+            fillOpacity: (data[feature.properties.NAME]/5)
+
+      })}else{
+              layer.setStyle({
+                weight: "3",
+
+            color: "#3388ff",
+            fillOpacity: "0.2"
+
+      })
+    }}
     const onEachFeature= (feature, layer)=> {
+      if (data[feature.properties.NAME] !== undefined){
+        let times = data[feature.properties.NAME].length
+        layer.setStyle({
+            weight: 1,
+            color: times > 10 ? "green" : "yellow",
+            fillOpacity: (data[feature.properties.NAME]/5)
+      })}
         layer.on({
-        //     mouseover: highlightFeature,
-        //     mouseout: resetHighlight,
-        click: () => console.log(feature.properties.NAME)
+            mouseover: () => select(layer),
+            mouseout: () => unselect(layer, feature, data),
+          click: () => console.log(layer)
         });
         
       }
