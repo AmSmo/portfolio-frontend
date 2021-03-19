@@ -1,0 +1,5 @@
+mutation SignIn($username: String!, $password: String!) {
+  signIn(options: { username: $username, password: $password }) {
+    ...RegularUserResponse
+  }
+}

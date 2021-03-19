@@ -6,7 +6,7 @@ import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
 import About from "./pages/About";
 import Home from "./pages/Home";
-
+import SignIn from './admin/SignIn'
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import projectList from "./util/projects.json";
 import { ProjectType } from "./util/customtypes";
@@ -45,6 +45,7 @@ const App: React.FC<{}> = () => {
                     <Route path="/resume" component={Resume} />
                     <Route path="/food" component={Food} />
                     <Route path="/about" component={About} />
+                    <Route path="/signin" component={SignIn} />
                     <Route path="/" component={Home} />
                   </Switch>
                 </CSSTransition>

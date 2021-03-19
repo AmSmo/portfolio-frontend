@@ -238,3 +238,8 @@ export const Main = styled.div`
     padding-top: 2rem;
   }
 `;
+
+export const LoginCenter = styled.div`
+  margin:auto;
+  padding-top: 100px;
+`
